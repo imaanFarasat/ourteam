@@ -194,7 +194,7 @@ body, .reza-section {
 
 .reza-content {
     flex: 1 1 55%;
-    padding: 40px;
+    padding: 48px 24px 36px 24px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -213,8 +213,8 @@ body, .reza-section {
 }
 
 .reza-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 1.5rem;
+    line-height: 2.1;
     color: #555;
     margin: 0 0 35px;
 }
@@ -271,11 +271,11 @@ body, .reza-section {
         min-height: 320px;
     }
     .reza-title {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
     }
     .reza-description {
-        font-size: 1.3rem;
-        line-height: 1.7;
+        font-size: 1.7rem;
+        line-height: 2.2;
     }
     .reza-button {
         font-size: 1.2rem;
@@ -289,6 +289,9 @@ body, .reza-section {
     .reza-slider {
         padding-left: 1vw;
         padding-right: 1vw;
+    }
+    .reza-content {
+        padding: 40px 10px 32px 10px;
     }
 }
 
@@ -472,16 +475,17 @@ function nextRezaSlide() {
     rezaCurrent = (rezaCurrent + 1) % rezaCards.length;
     updateRezaSlider();
 }
-function startRezaAutoScroll() {
-    rezaInterval = setInterval(() => {
-        nextRezaSlide();
-    }, 4000);
-}
-function stopRezaAutoScroll() {
-    clearInterval(rezaInterval);
-}
+// Auto sliding is now disabled
+// function startRezaAutoScroll() {
+//   rezaInterval = setInterval(() => {
+//     nextRezaSlide();
+//   }, 4000);
+// }
+// function stopRezaAutoScroll() {
+//   clearInterval(rezaInterval);
+// }
 updateRezaSlider();
-startRezaAutoScroll();
-rezaSlider.addEventListener('mouseenter', stopRezaAutoScroll);
-rezaSlider.addEventListener('mouseleave', startRezaAutoScroll);
+// startRezaAutoScroll();
+// rezaSlider.addEventListener('mouseenter', stopRezaAutoScroll);
+// rezaSlider.addEventListener('mouseleave', startRezaAutoScroll);
 </script>
